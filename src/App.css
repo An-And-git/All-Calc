@@ -1,0 +1,208 @@
+body{
+  background-color: #fff;
+  color: #ffffff;
+}
+p{
+  font-size: 16px;
+  color: #b9b6ab;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  color: #000;
+}
+label{
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 22px;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+.heading{
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.heading h1{
+  color: #ffc107;
+}
+.heading h1 span{
+  color: #b9b6ab;
+}
+/* .heading h1::before{
+  content: "";
+    position: absolute;
+    left: 30%;
+    right: 50%;
+    top: -7px;
+    width: 70px;
+    height: 70px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: #FF0099;
+    background-image: linear-gradient(45deg,#3023AE 0%,#FF0099 100%);
+    z-index: -1;
+} */
+.calc-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    padding: 40px;
+}
+.age-calc{
+  display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0 auto;
+    height: 460px;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    padding: 40px;
+}
+.age-calc > label{
+    font-size: 20px;
+    margin-bottom: 22px;
+    letter-spacing: 0.8px;
+    position: relative;
+}
+.age-calc > label:before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #202020;
+    position: absolute;
+    left: 120%;
+    top: 60%;
+}
+.age-calc > label:after{
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #202020;
+  position: absolute;
+  right: 120%;
+  top: 60%;
+}
+.age-calc input[type="date"]{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    position: relative;
+}
+.age-calc input[type="date"]:first-child{
+  margin-bottom: 30px;
+}
+.age-calc input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+h3.age-result {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+.color-toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.color-toggle p {
+  font-size: 28px;
+  cursor: pointer;
+  color: yellow;
+}
+
+body.light{
+  background-color: #ffffff;
+}
+
+body.light .age-calc{
+  background: #ffffff;
+  box-shadow:  20px 20px 60px #d9d9d9,
+              -20px -20px 60px #ffffff;
+}
+body.light .age-calc > input[type="date"]{
+  background: #eee;
+}
+body.light .age-calc > label{
+  color: #1b1d28;
+}
+body.light .age-calc > label::before, body.light .age-calc > label::after {
+  background: #1b1d28;
+}
+body.light h3.age-result{
+  color: #1b1d28;
+}
+body.light .color-toggle p{
+  color: #1b1d28;
+}
+
+ul.list-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+ul.list-tiles li {
+    list-style: none;
+    margin: 10px;
+    width: 33.3%;
+}
+ul.list-tiles li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+ul.list-tiles li a svg{
+    margin-bottom: 8px;
+    font-size: 28px;
+}
