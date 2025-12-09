@@ -12,7 +12,8 @@ const CurrencyCalc = () =>{
     useEffect(() =>{
         if(didFetchRef.current) return;
         didFetchRef.current = true;
-        fetch('https://v6.exchangerate-api.com/v6/1edb79c64121e31bbda3c21b/latest/USD')
+        const apiKey = process.env.REACT_APP_EXCHANGE_RATE_API_KEY;
+        fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`)
             .then(response => response.json())
             .then(data => getCurrency(data.conversion_rates))
             .catch(error => console.log('Error fetching currency data:', error));
