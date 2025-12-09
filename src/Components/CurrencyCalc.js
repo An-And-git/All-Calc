@@ -71,7 +71,7 @@ const CurrencyCalc = () =>{
     return(
         <div className='calc-container'>
             <div className='row w-100 mb-4'>
-                <div className='col-md-10 col-12'>
+                <div className='col-md-10 col-7'>
                     <div className='d-flex align-items-center gap-2'>
                         <input 
                             type="number" 
@@ -83,7 +83,7 @@ const CurrencyCalc = () =>{
                         />
                     </div>
                 </div>
-                <div className='col-md-2 col-12'>
+                <div className='col-md-2 col-5'>
                     <select 
                         className='form-select' 
                         value={currency1}
@@ -98,7 +98,7 @@ const CurrencyCalc = () =>{
                 </div>
             </div>
             <div className='row w-100'>
-                <div className='col-md-10 col-12'>
+                <div className='col-md-10 col-7'>
                     <div className='d-flex align-items-center gap-2'>
                         <input 
                             type="number" 
@@ -110,7 +110,7 @@ const CurrencyCalc = () =>{
                         />
                     </div>
                 </div>
-                <div className='col-md-2 col-12'>
+                <div className='col-md-2 col-5'>
                     <select 
                         className='form-select' 
                         value={currency2}
